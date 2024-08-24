@@ -2,7 +2,7 @@ function Navbar(){
     return (
 
         <>
-                    <nav className='h-[70px] w-[100%] bg-[#FF69B4]'>navbar</nav>
+                    <nav className='h-[40px] w-[100%] bg-[#FF69B4]'>navbar</nav>
 
         </>
     )
