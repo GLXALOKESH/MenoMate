@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import {SignUp_left} from '../components/SignUp_left';  
 import {Glad_page} from '../components/Glad_page';
 import Navbar from '../components/Navbar';
