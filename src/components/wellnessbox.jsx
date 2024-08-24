@@ -1,11 +1,13 @@
 import React from 'react'
 
-const wellnessbox = () => {
+const wellnessbox = (props) => {
   return (
     <>
-     <div className='w-[100px] h-[100px] bg-black'>
-        hello
+     <div className='w-[138px] h-[129px]  m-[20px] rounded-[15px] bg-[#fffacd] border border-[black] flex justify-center items-center '>
+        <img src={props?.path} alt="" className='w-[75px] h-[75px]' />
         </div> 
+        
+        
     </>
   )
 }
