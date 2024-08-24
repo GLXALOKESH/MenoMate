@@ -1,11 +1,10 @@
+// import { useState } from 'react'
+
+// import Wellness from "./pages/Wellness"
+
 import { useState } from 'react'
 import './App.css'
-
-
-
-import Navbar from './pages/Navbar';
-
-
+import SignUp from './pages/SignUp'
 
 
 function App() {
@@ -18,7 +17,7 @@ function App() {
   )
   return (
     <>
-         <Wellness />
+         <SignUp />
     </>
   )
 }
