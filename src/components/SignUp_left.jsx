@@ -3,7 +3,7 @@ import React from "react";
 function SignUp_left() {
   return (
     <>
-            <div className=" h-full w-full md:h-[455px] md:w-[384px] border-2 border-solid border-red-600 bg-[#FFFFFF]  flex flex-col justify-center items-center " >
+            <div className=" h-full w-full md:h-[455px] md:w-[384px]  bg-[#FFFFFF]  flex flex-col justify-center items-center " >
                 <div className="h-[404px] w-[307.2px]  bg-[#FFFFFF] flex flex-col gap-y-[35px] px-[10px]">
                     <div className="h-[35px] w-[91px] ">
                         <p className="poppins text-[23px] font-[600]">SIGN UP</p>

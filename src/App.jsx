@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 
-import viteLogo from '/vite.svg'
 import Wellness from "./pages/Wellness"
 
 import './App.css'
@@ -15,7 +14,9 @@ function App() {
   return (
     <>
 
-     <Signup />
+   <SignIn/>
+{/*  <Signup/> */}
+   
 
     </>
   )
