@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 import bcrype from "bcrypt";
 import jwt from "jsonwebtoken";
+import { DOTENV_PATH } from "../constants";
 
 const userSchema = mongoose.Schema(
   {
@@ -18,7 +19,7 @@ const userSchema = mongoose.Schema(
       unique: true,
       lowercase: true,
       trim: true,
-    },
+    },  
     avatar: {
       type: String,
       required: true,
