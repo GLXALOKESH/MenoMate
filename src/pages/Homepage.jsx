@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Wellness.css';
+import './Homepage.css';
 
 function Wellness() {
   const [day, setDay] = useState(6);
