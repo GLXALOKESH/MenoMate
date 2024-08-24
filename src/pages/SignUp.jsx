@@ -1,14 +1,12 @@
-import React from 'react';  
-import {SignUp_left } from '../components/SignUp_left';
-import {WelcomeBack} from '../components/WelcomeBack';
-function SignUp() {
-    return (
-        <div>
-   {/**        <SignUp_left /> */}
-   <WelcomeBack />
-        </div>
-    );
-    
+import React from 'react';
+import {SignUp_left} from '../components/SignUp_left';  
+import {Glad_page} from '../components/Glad_page';
+
+function Signup(){
+    return(
+     
+      <Glad_page/>
+    )
 }
 
-export default SignUp;
+export default Signup;
