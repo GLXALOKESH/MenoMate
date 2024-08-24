@@ -2,23 +2,7 @@ import React, { useState } from 'react';
 import './Homepage.css';
 
 function Wellness() {
-  const [day, setDay] = useState(6);
-  const [waterConsumed, setWaterConsumed] = useState(2);
-  const [symptoms, setSymptoms] = useState([]);
-
-  const handleAddSymptom = (symptom) => {
-    setSymptoms([...symptoms, symptom]);
-  };
-
-  const handleRemoveSymptom = (index) => {
-    setSymptoms(symptoms.filter((_, i) => i !== index));
-  };
-
-  const handleWaterChange = (event) => {
-    setWaterConsumed(event.target.value);
-  };
-
-  const handleDayChange = (event) => {
+ handleDayChange = (event) => {
     setDay(event.target.value);
   };
 
