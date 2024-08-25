@@ -2,6 +2,7 @@ import React from 'react'
 import Wellnessbox from "../components/wellnessbox.jsx"
 import Navbar from '../components/Navbar.jsx'
 import Footer from '../components/Footer.jsx'
+import { NavLink } from 'react-router-dom'
 const Wellness = () => {
   return (
     <>
@@ -22,7 +23,7 @@ const Wellness = () => {
             <div className="main w-full h-[calc(100%-60px)] flex  max-sm:flex-wrap">
             <Wellnessbox path="water.svg"/> 
       <Wellnessbox path="meditation.svg"/> 
-      <Wellnessbox path="food.svg"/> 
+   <NavLink to="/food"><Wellnessbox path="food.svg"/> </NavLink>
       <Wellnessbox path="game.svg"/> 
       <Wellnessbox path="chat1.svg"/>
             </div>

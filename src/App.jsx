@@ -1,7 +1,6 @@
 // import { useState } from 'react'
 import 'leaflet/dist/leaflet.css';
-// import Wellness from "./pages/Wellness"
-// import Wellness from './pages/Wellness'
+import Wellness from "./pages/Wellness"
 // import { useState } from 'react'
 import './App.css'
 
@@ -15,6 +14,7 @@ import {
 } from "react-router-dom";
 import Landing  from './pages/Landing.jsx';
 import Map from "./pages/Map.jsx"
+import Community from './pages/community.jsx';
 
 const router = createBrowserRouter([
  
@@ -43,6 +43,14 @@ const router = createBrowserRouter([
   {
     path: "/checking",
     element: <div>Hello world!</div>,
+  },
+  {
+    path: "/wellness",
+    element: <Wellness />,
+  },
+  {
+    path: "/community",
+    element: <Community />,
   },
 ]);
 
