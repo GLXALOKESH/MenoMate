@@ -1,17 +1,18 @@
 import React from 'react'
 import Menu from './Menu.jsx'
+import { NavLink } from 'react-router-dom'
 
 const Footer = () => {
   return (
     <>
     <div className="cont bg-[#ffdab9] w-full h-[60px] border-[1px] border-[#fffacd] flex ">
-    <Menu  path="home.svg" />
-    <Menu  path="wellness.svg" />
-    <Menu  path="book.svg" />
-    <Menu  path="community.svg" />
-    <Menu  path="maps.svg" />
-    <Menu  path="brain.svg" />
-    <Menu  path="emergency.svg" />
+    <NavLink className="h-full w-[14.3%]" to="/home"> <Menu  path="home.svg"  /> </NavLink>
+    <NavLink className="h-full w-[14.3%]" to="/wellness"> <Menu  path="wellness.svg" /> </NavLink>
+    <NavLink className="h-full w-[14.3%]" to="/book"> <Menu  path="book.svg" /> </NavLink>
+    <NavLink className="h-full w-[14.3%]" to="/community"> <Menu  path="community.svg" /> </NavLink>
+    <NavLink className="h-full w-[14.3%]" to="/maps"> <Menu  path="maps.svg" /> </NavLink>
+    <NavLink className="h-full w-[14.3%]" to="/brain">  <Menu  path="brain.svg" /> </NavLink>
+    <NavLink className="h-full w-[14.3%]" to="/emergency"> <Menu  path="emergency.svg" /> </NavLink>
     </div>
     </>
   )

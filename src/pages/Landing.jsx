@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
+import { NavLink } from 'react-router-dom'
 
 const Landing = () => {
   return (
@@ -9,7 +10,7 @@ const Landing = () => {
         <div className="textbox flex justify-center items-center flex-col  w-[30%]">
             <h1 className='text-[50px] font-bold'>MENO MATE</h1>
             <p className=' text-center m-[5px]'>MenoMate is a website where womans can get help during their periods and during other biological phases</p>
-            <button className='bg-black text-white p-[8px] rounded-[10px]'>lets start</button>
+            <NavLink to="/signin" ><button className='bg-black text-white p-[8px] rounded-[10px]'>lets start</button></NavLink>
         </div>
       </div>
     </>
