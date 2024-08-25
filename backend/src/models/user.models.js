@@ -1,18 +1,11 @@
 import mongoose from "mongoose";
 import bcrype from "bcrypt";
 import jwt from "jsonwebtoken";
-import { DOTENV_PATH } from "../constants";
+import { DOTENV_PATH } from "../constants.js";
 
 const userSchema = mongoose.Schema(
   {
-    username: {
-      type: String,
-      required: true,
-      unique: true,
-      lowercase: true,
-      trim: true,
-      index: true,
-    },
+  
     email: {
       type: String,
       required: true,
@@ -20,10 +13,7 @@ const userSchema = mongoose.Schema(
       lowercase: true,
       trim: true,
     },  
-    avatar: {
-      type: String,
-      required: true,
-    },
+  
     password: {
       type: String,
       required: true,
@@ -43,35 +33,45 @@ userSchema.pre("save", async function (next) {
   next();
 });
 
-userSchema.methods.isPasswordCorrect = async function () {
+userSchema.methods.isPasswordCorrect = async function (password) {
   return await bcrype.compare(password, this.password);
 };
 
 userSchema.methods.generateAccessToken = function () {
-  return jwt.sign(
-    {
-      _id: this._id,
-      username: this.username,
-      fullName: this.fullName,
-      email: this.email,
-    },
-    process.env.ACCESS_TOKEN_SECRET,
-    {
-      expiresIn: process.env.ACCESS_TOKEN_EXPIRY,
-    }
-  );
+  try {
+    return jwt.sign(
+      {
+        _id: this._id,
+        email: this.email,
+      },
+      "your_access_token_secret_key", // Replace with your actual secret key
+      {
+        expiresIn: "1h", // Token expiry time (e.g., 1 hour)
+      }
+    );
+  } catch (error) {
+    console.error("Error generating access token:", error);
+    throw new Error("Error generating access token");
+  }
 };
 
 userSchema.methods.generateRefreshToken = function () {
-  return jwt.sign(
-    {
-      _id: this._id,
-    },
-    process.env.REFRESH_TOKEN_SECRET,
-    {
-      expiresIn: process.env.REFRESH_TOKEN_EXPIRY,
-    }
-  );
+  try {
+    return jwt.sign(
+      {
+        _id: this._id,
+      },
+      "your_refresh_token_secret_key", // Replace with your actual secret key
+      {
+        expiresIn: "7d", // Token expiry time (e.g., 7 days)
+      }
+    );
+  } catch (error) {
+    console.error("Error generating refresh token:", error);
+    throw new Error("Error generating refresh token");
+  }
 };
+
+
 
 export const User = mongoose.model("User", userSchema);
