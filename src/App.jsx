@@ -15,6 +15,8 @@ import {
 } from "react-router-dom";
 import Landing  from './pages/Landing.jsx';
 import Map from "./pages/Map.jsx"
+import MenstrualPhaseForm from './pages/recomadation.jsx';
+import Mainrecondationpage from './pages/Mainrecondationpage.jsx';
 
 const router = createBrowserRouter([
  
@@ -40,9 +42,14 @@ const router = createBrowserRouter([
     path: "/maps",
     element: <Map />,
   },
+
   {
     path: "/checking",
     element: <div>Hello world!</div>,
+  },
+  {
+    path: "/Mainrecondationpage",
+    element: <Mainrecondationpage />,
   },
 ]);
 
