@@ -14,7 +14,6 @@ import {
 } from "react-router-dom";
 import Landing  from './pages/Landing.jsx';
 import Map from "./pages/Map.jsx"
-import Community from './pages/community.jsx';
 
 const router = createBrowserRouter([
  
@@ -40,17 +39,10 @@ const router = createBrowserRouter([
     path: "/maps",
     element: <Map />,
   },
+
   {
     path: "/checking",
     element: <div>Hello world!</div>,
-  },
-  {
-    path: "/wellness",
-    element: <Wellness />,
-  },
-  {
-    path: "/community",
-    element: <Community />,
   },
 ]);
 
