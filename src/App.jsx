@@ -1,11 +1,9 @@
 // import { useState } from 'react'
-
+import 'leaflet/dist/leaflet.css';
 // import Wellness from "./pages/Wellness"
 import Wellness from './pages/Wellness'
-import Login from './pages/Login'
-import SignIn_left from './components/SignIn_left'
 import { useState } from 'react'
-
+import './App.css'
 // import SignIn from './pages/SignIn'
 // import Signup from './pages/SignUp'
 
@@ -15,7 +13,7 @@ function App() {
 
   return (
     <div>
-         <SignIn_left/>
+         <Wellness/>
     </div>
   )
 }
