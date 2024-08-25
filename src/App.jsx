@@ -14,7 +14,8 @@ import {
 } from "react-router-dom";
 import Landing  from './pages/Landing.jsx';
 import Map from "./pages/Map.jsx"
-
+import Mainrecondationpage from './pages/Mainrecondationpage.jsx';
+import Community from './pages/community.jsx';
 const router = createBrowserRouter([
  
 
@@ -44,6 +45,19 @@ const router = createBrowserRouter([
     path: "/checking",
     element: <div>Hello world!</div>,
   },
+  {
+    path: "/food",
+    element: <Mainrecondationpage />,
+  },
+  {
+    path: "/wellness",
+    element: <Wellness />,
+  },
+  {
+    path: "/community",
+    element: <Community />,
+  },
+  
 ]);
 
 function App() {
