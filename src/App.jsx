@@ -1,6 +1,7 @@
 // import { useState } from 'react'
 import 'leaflet/dist/leaflet.css';
-import Wellness from "./pages/Wellness.jsx"
+// import Wellness from "./pages/Wellness"
+// import Wellness from './pages/Wellness'
 // import { useState } from 'react'
 import './App.css'
 
@@ -41,11 +42,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/checking",
-    element: <h1>hello</h1>,
-  },
-  {
-    path: "/wellness",
-    element: <Wellness />,
+    element: <div>Hello world!</div>,
   },
 ]);
 
@@ -53,9 +50,9 @@ function App() {
 
 
   return (
-    <RouterProvider router={router}>
-     
-    </RouterProvider>
+    <div>
+         <Wellness/>
+    </div>
   )
 }
 
