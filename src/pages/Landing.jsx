@@ -4,11 +4,12 @@ import Navbar from '../components/Navbar'
 const Landing = () => {
   return (
     <>
-    <Navbar />
-      <div className="main w-[100vw] h-[100vh]">
-        <div className="textbox">
-            <h1>MENO MATE</h1>
-            <button>lets start</button>
+    <Navbar signup signin />
+      <div className="main w-[100vw] h-[calc(100vh-70px)] bg-[#ffdab9] flex items-center justify-center ">
+        <div className="textbox flex justify-center items-center flex-col  w-[30%]">
+            <h1 className='text-[50px] font-bold'>MENO MATE</h1>
+            <p className=' text-center m-[5px]'>MenoMate is a website where womans can get help during their periods and during other biological phases</p>
+            <button className='bg-black text-white p-[8px] rounded-[10px]'>lets start</button>
         </div>
       </div>
     </>
