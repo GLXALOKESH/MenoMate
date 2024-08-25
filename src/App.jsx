@@ -51,7 +51,7 @@ function App() {
 
   return (
     <div>
-         <Wellness/>
+         <RouterProvider router={router} />
     </div>
   )
 }
